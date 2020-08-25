@@ -27,4 +27,5 @@ setxkbmap -option terminate:ctrl_alt_bksp
 # Start Chromium in kiosk mode
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
 sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
+rm -rf ~/.cache/chromium
 chromium-browser --noerrdialogs --kiosk http://0.0.0.0:9090 --incognito --disable-translate --window-size=1920,1080 --window-position=0,0 --disable-gpu-rasterization --ignore-gpu-blacklist --disable-infobars --check-for-update-interval=31536000 --enable-logging=stderr --v=1 > log.txt 2>&1
