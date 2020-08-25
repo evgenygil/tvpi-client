@@ -33,6 +33,13 @@ echo "Installing NodeJS..."
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+echo "Installing and configuring Sqlite3 DB..."
+sudo apt-get install -y sqlite3
+mkdir ~/tvpi-client/db
+sqlite3 ~/tvpi-client/db/data.db <<'END_SQL'
+CREATE TABLE IF NOT EXISTS stat (id INTEGER PRIMARY KEY, name TEXT NOT NULL, time DATETIME DEFAULT CURRENT_TIMESTAMP);
+END_SQL
+
 echo "Installing and building project..."
 cd ~/tvpi-client && npm i && npm run build
 
