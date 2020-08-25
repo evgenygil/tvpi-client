@@ -3,7 +3,7 @@ export const rootController = (fastify, opts, next) => {
 		return reply.sendFile('index.html')
 	});
 
-	fastify.get('/video/:id', (req, reply) => reply.sendFile(`video/${req.params.id}`));
+	// fastify.get('/video/:id', (req, reply) => reply.sendFile(`video/${req.params.id}`));
 
 	next()
 };

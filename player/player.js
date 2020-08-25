@@ -7,7 +7,7 @@
 		player.src = data[index];
 		player.play();
 
-		// axios.post('http://0.0.0.0:9090/statistics/query', {media: data[activeVideo]});
+		axios.post('http://0.0.0.0:9090/statistics/query', {media: data[activeVideo]});
 	};
 
 	let activeVideo = 0;

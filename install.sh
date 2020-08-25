@@ -4,6 +4,7 @@ sudo apt-get -y install xserver-xorg x11-xserver-utils xinit openbox
 
 echo "Installing chromium-browser..."
 sudo apt-get -y install chromium-browser
+sudo apt-get -y install rpi-chromium-mods
 
 if [ ! -f /usr/bin/gdebi ]
 then
@@ -30,7 +31,7 @@ echo "Kweb suite must have been installed before it can be updated"
 fi
 
 echo "Installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "Installing and configuring Sqlite3 DB..."
@@ -46,6 +47,12 @@ cd ~/tvpi-client && npm i && npm run build
 echo "Writing startup config..."
 touch ~/.bash_profile
 echo "[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" > ~/.bash_profile
+
+echo "Configurong swap..."
+sudo dphys-swapfile swapoff
+sudo cp config/dphys-swapfile /etc/
+sudo dphys-swapfile setup
+sudo dphys-swapfile swapon
 
 echo "Copying autostart configuration..."
 sudo cp config/autostart /etc/xdg/openbox/
