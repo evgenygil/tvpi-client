@@ -4,9 +4,10 @@
 * `sudo raspi-config` (change password, wifi, ssh, set console autologin, locale)
 * `sudo apt-get update` `sudo apt-get upgrade`
 * Clone project `git clone https://github.com/Gil707/tvpi-client.git`
-* Run `./install.sh` (`sudo chmod +x install.sh` if you have permission error)
+* Get into `~/tvpi-client` and run `./install.sh` (`sudo chmod +x install.sh` if you have permission error)
+* Run service with `node ~/tvpi-client/build/index.js`
 
-* For service autostart you can run it simple with `node ~/tvpi/build/index.js` as service or use any software, below is pm2 example
+* For autostart you can run it simple as service or use any software, below is pm2 example
 ```
 sudo npm install pm2 -g
 

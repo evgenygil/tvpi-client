@@ -29,6 +29,13 @@ else
 echo "Kweb suite must have been installed before it can be updated"
 fi
 
+echo "Installing NodeJS..."
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+echo "Installing and building project..."
+cd ~/tvpi-client && npm i && npm run build
+
 echo "Writing startup config..."
 touch ~/.bash_profile
 echo "[[ -z \$DISPLAY && \$XDG_VTNR -eq 1 ]] && startx -- -nocursor" > ~/.bash_profile
@@ -39,11 +46,4 @@ sudo cp config/autostart /etc/xdg/openbox/
 echo "Copying boot configuration..."
 sudo cp config/config.txt /boot/
 
-echo "Installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo apt-get install -y nodejs
-
-echo "Installing and building project..."
-cd ~/tvpi-player && npm i && npm run build
-
-echo "Successfully installed! Please configure service autostart and reboot to apply changes."
+echo "Successfully installed! Run with node build/index.js or configure service autostart and reboot to apply changes."
