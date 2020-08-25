@@ -44,6 +44,6 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "Installing and building project..."
-cd ~/tvpi && npm i && npm run build
+cd ~/tvpi-player && npm i && npm run build
 
 echo "Successfully installed! Please configure service autostart and reboot to apply changes."

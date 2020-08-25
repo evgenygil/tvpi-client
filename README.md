@@ -3,6 +3,7 @@
 * Install Raspbian OS Lite (latest: Buster)
 * `sudo raspi-config` (change password, wifi, ssh, set console autologin, locale)
 * `sudo apt-get update` `sudo apt-get upgrade`
+* Clone project `git clone https://github.com/Gil707/tvpi-client.git`
 * Run `./install.sh` (`sudo chmod +x install.sh` if you have permission error)
 
 * For service autostart you can run it simple with `node ~/tvpi/build/index.js` as service or use any software, below is pm2 example
