@@ -1,9 +1,11 @@
+# Raspberry Pi media signage system
+
 ## Installation
 
 * Install Raspbian OS Lite (latest: Buster)
 * `sudo raspi-config` (change password, wifi, ssh, set console autologin, locale)
 * `sudo apt-get update` `sudo apt-get upgrade`
-* Clone project `git clone https://github.com/Gil707/tvpi-client.git`
+* Clone project `git clone https://github.com/evgenygil/tvpi-client.git`
 * Get into `~/tvpi-client` and run `./install.sh` (`sudo chmod +x install.sh` if you have permission error)
 * Run service with `node ~/tvpi-client/build/index.js`
 
