@@ -30,7 +30,7 @@ echo "Kweb suite must have been installed before it can be updated"
 fi
 
 echo "Installing NodeJS..."
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 echo "Installing and configuring Sqlite3 DB..."
