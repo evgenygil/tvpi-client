@@ -4,7 +4,6 @@ sudo apt-get -y install xserver-xorg x11-xserver-utils xinit openbox
 
 echo "Installing chromium-browser..."
 sudo apt-get -y install chromium-browser
-sudo apt-get -y install rpi-chromium-mods
 
 if [ ! -f /usr/bin/gdebi ]
 then
