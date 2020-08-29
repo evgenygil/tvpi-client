@@ -1,8 +1,6 @@
 import fastify from 'fastify'
 import fastifyStatic from 'fastify-static';
 import * as path from 'path';
-import {open} from 'sqlite';
-import sqlite3 from "sqlite3";
 
 import {rootController} from './modules/root/controller';
 import {playerController} from './modules/player/controller';
@@ -29,12 +27,4 @@ server.listen(SERVER_PORT, SERVER_ADDRESS, (err, address) => {
 		process.exit(1)
 	}
 	console.log(`Server listening at ${address}`)
-});
-
-/**
- * DB connection instance
- */
-export const openDb = () => open({
-	filename: `${__dirname}/../db/data.db`,
-	driver: sqlite3.Database
 });
