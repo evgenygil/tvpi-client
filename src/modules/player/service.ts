@@ -11,16 +11,16 @@ export class PlayerService {
 
 	public getList() {
 		return [
-			'video/1_.mp4',
-			'video/2_.mp4',
-			'video/3_.mp4',
-			'video/4_.mp4',
-			'video/5_.mp4',
-			'video/6_.mp4',
-			'video/7_.mp4',
-			'video/8_.mp4',
-			'video/9_.mp4',
-			'video/10_.mp4'
+			'video/1_.webm',
+			'video/2_.webm',
+			'video/3_.webm',
+			'video/4_.webm',
+			'video/5_.webm',
+			'video/6_.webm',
+			'video/7_.webm',
+			'video/8_.webm',
+			'video/9_.webm',
+			'video/10_.webm'
 		]
 	}
 }
