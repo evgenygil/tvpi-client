@@ -42,7 +42,7 @@ END_SQL
 
 echo "Installing and building project..."
 cd ~/tvpi-client && npm i && npm run build
-cd ~/tvpi-client/player && mkdir video
+mkdir ~/tvpi-client/player/video
 
 echo "Writing startup config..."
 touch ~/.bash_profile
