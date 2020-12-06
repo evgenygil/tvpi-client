@@ -42,6 +42,7 @@ END_SQL
 
 echo "Installing and building project..."
 cd ~/tvpi-client && npm i && npm run build
+cd ~/tvpi-client/player && mkdir video
 
 echo "Writing startup config..."
 touch ~/.bash_profile
@@ -60,3 +61,4 @@ echo "Copying boot configuration..."
 sudo cp config/config.txt /boot/
 
 echo "Successfully installed! Run with node build/index.js or configure service autostart and reboot to apply changes."
+echo "!!! Videos should be in tvpi-client/player/video folder."

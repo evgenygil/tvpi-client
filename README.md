@@ -13,7 +13,7 @@
 ```
 sudo npm install pm2 -g
 
-sudo pm2 startup // use command from result
+pm2 startup // use command from result
 
 pm2 start <index.js path>
 pm2 save
